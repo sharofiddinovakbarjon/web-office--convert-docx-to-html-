@@ -1,0 +1,186 @@
+/* Hide TinyMCE promotion */
+.tox-promotion-button {
+  display: none !important;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f3f3;
+  min-height: 100vh;
+}
+
+/* Main office container */
+.office-container {
+  min-height: 100vh;
+  background-color: #f3f3f3;
+}
+
+/* Header section */
+.office-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d1d1d1;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.templates-section h3 {
+  color: #323130;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.templates-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.template-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #f8f8f8;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.template-item span {
+  color: #323130;
+}
+
+.select-btn {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.select-btn:hover {
+  background-color: #106ebe;
+}
+
+/* Main editor area */
+.office-main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: calc(100vh - 100px);
+}
+
+/* Paper container */
+.paper-container {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Paper styling */
+.paper {
+  width: 794px; /* A4 width at 96 DPI */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: -1;
+}
+
+/* TinyMCE customizations */
+.tox-tinymce {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.tox-editor-header {
+  border-bottom: 1px solid #e1e1e1 !important;
+  background-color: #fafafa !important;
+}
+
+.tox-toolbar__primary {
+  background-color: #fafafa !important;
+  border-bottom: 1px solid #e1e1e1 !important;
+}
+
+.tox-edit-area {
+  border: none !important;
+}
+
+.tox-edit-area__iframe {
+  background-color: white !important;
+}
+
+/* Toolbar styling to match Office */
+.tox .tox-toolbar__group {
+  border-right: 1px solid #d1d1d1 !important;
+}
+
+.tox .tox-tbtn {
+  border-radius: 2px !important;
+  margin: 1px !important;
+}
+
+.tox .tox-tbtn:hover {
+  background-color: #deecf9 !important;
+  border-color: #106ebe !important;
+}
+
+.tox .tox-tbtn--enabled {
+  background-color: #cce4f7 !important;
+  border-color: #0078d4 !important;
+}
+
+/* Responsive design */
+/* @media (max-width: 900px) {
+  .paper-container {
+    max-width: 100%;
+  }
+  
+  .paper {
+    width: 100%;
+    max-width: 794px;
+    margin: 0 10px;
+  }
+  
+  .office-main {
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .templates-list {
+    flex-direction: column;
+  }
+  
+  .template-item {
+    justify-content: space-between;
+  }
+  
+  .office-header {
+    padding: 10px 15px;
+  }
+} */
